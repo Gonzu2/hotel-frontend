@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Rooms</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <div id="overlay">
+      <div class="popup">
+        <button id="closePopupBtn" onclick="closeOverlay(event)">Close</button>
+        <div id="popup-content"></div>
+      </div>
+    </div>
+
+    <nav>
+      <h1>Hotel App</h1>
+      <ul>
+        <li>
+          <button class="nav-item" onclick="checkReservations()">
+            Already reserved?
+          </button>
+        </li>
+        <li><button class="button nav-item">Reservation list</button></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <ul class="container-header">
+        <li><h1>Book a room in our wonderful hotel</h1></li>
+        <li class="container-header-dates">
+          <div>
+            <label for="checkin">Checkin</label>
+            <input type="date" name="checkin" id="checkin" />
+          </div>
+          <div>
+            <label for="checkout">Checkout</label>
+            <input type="date" name="checkout" id="checkout" />
+          </div>
+        </li>
+
+        <li style="display:flex; flex-direction: column; gap: 10px;">
+          <button
+            onclick="checkAvailability()"
+            style="color: white; font-size: 18px"
+          >
+            Check availability
+          </button>
+          <button id="clearButton" class="button" style="display: none; width: 100%;">Clear</button>
+        </li>
+      </ul>
+      <img src="" alt="" />
+      <ul class="room-container"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
